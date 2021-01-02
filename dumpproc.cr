@@ -39,6 +39,7 @@ with_output(output,output_file) do |output_file|
           output = "#{pid}.dump" unless output_file
           max_chunks = chunks = 0
           bytes = 0_i64
+          STDERR.puts("#{PROGRAM_NAME}: pid #{pid}: Dumping memory")
           with_output(output,output_file) do |output_file|
             next unless output_file
             maps_file.each_line do |line|
@@ -59,7 +60,7 @@ with_output(output,output_file) do |output_file|
               end
             end
           end
-          STDERR.puts("#{PROGRAM_NAME}: pid #{pid}: wrote #{chunks}/#{max_chunks} memory chunks (#{bytes} bytes) to #{output}") unless quiet
+          STDERR.puts("#{PROGRAM_NAME}: pid #{pid}: Wrote #{chunks}/#{max_chunks} memory chunks (#{bytes} bytes) to #{output}") unless quiet
         end
       end
     rescue e : IO::Error
