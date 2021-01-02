@@ -1,0 +1,23 @@
+name: dumpproc
+version: 0.1.0
+
+authors:
+  - Rob David <rob.j.david@googlemail.com>
+
+# description: |
+#   Short description of dumpproc
+
+targets:
+  dumpproc:
+    main: dumpproc.cr
+    
+# dependencies:
+#   pg:
+#     github: will/crystal-pg
+#     version: "~> 0.5"
+
+# development_dependencies:
+#   webmock:
+#     github: manastech/webmock.cr
+
+# license: MIT
