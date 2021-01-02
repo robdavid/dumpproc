@@ -1,0 +1,1 @@
+Simple utility to create an unstructured memory dump of one or more Linux processes.
