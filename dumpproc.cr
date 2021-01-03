@@ -64,7 +64,7 @@ with_output(output,output_file) do |output_file|
         end
       end
     rescue e : IO::Error
-      puts("#{PROGRAM_NAME}: #{pid}: #{e}")
+      STDERR.puts("#{PROGRAM_NAME}: #{pid}: #{e}")
     end
   end
 end
